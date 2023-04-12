@@ -1,0 +1,27 @@
+p{
+    color: #fd4600;
+}
+p{
+    font-style: italic;
+    
+} 
+p{
+    font-size: larger;
+}
+.uppercase{
+    text-transform: uppercase;
+
+}
+.list{
+    color: rebeccapurple;
+}
+.frontfam{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h4{
+    color: blue;
+}
+li , h4{
+    text-transform: uppercase;
+    font-family: cursive;
+}
