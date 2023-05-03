@@ -1,0 +1,28 @@
+ html{
+    font-size:  15px;
+ }
+ #outer-div{
+    border: 2px solid black;
+ }
+ #div1{
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    position: relative;
+ }
+ #div2{
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
+   
+ }
+ #div3{
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+
+ }

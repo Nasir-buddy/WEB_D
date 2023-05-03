@@ -1,0 +1,31 @@
+#div1{
+    height: 150px;
+    width: 150px;
+    background-color: aqua;
+    border: 2px solid blue;
+    border-radius: 4px;
+    box-sizing: border-box ;    
+    overflow: scroll;
+    
+}
+#div2{
+    margin: 20px;
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    /* border-width: 2px 4px 6px 8px;
+    border-style: solid;
+    border-color: black; */
+    border: 4px solid black;
+    border-radius: 4px;
+}
+#inner-div{
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    margin: 20px;
+}
+#sample-text{
+    border-left: 2px solid red;
+    border-radius: 8px;
+} 
