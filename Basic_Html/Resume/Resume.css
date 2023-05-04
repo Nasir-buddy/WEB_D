@@ -52,12 +52,90 @@ body{
     box-shadow: 0px 0px 6px 4px rgb(128, 255, 0 , 0.5);
  }
 
+ section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ section:nth-child(2n){
+    background-color: #9e9b9b29;
+ }
+ section:nth-child(2n + 1){
+    background-color: white;
+ }
+ .section-heading{
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+ }
+ .section-heading span{
+    font-size: 40px;
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+ }
+
+ /* Skill section */
+ .skills-display{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ }
+ .skill-progress{
+    width: 8rem;
+    height: 1.4rem;
+    background-color: lightgray;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+    margin: 25px;
+    overflow: hidden;
+    /* border: 2px solid black; */
+ }
+ .skill-progress>div{
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 1px 1px 5px 2px blue;
+ }
+ .skill-name span{
+    color:  white;
+    font-size: 1rem;
+    margin-left: 10px;
+    vertical-align: middle;
+ }
+ /* percentage class*/
+ .eighty-five-percent{
+    width: 85%;
+    height: inherit;
+ }
+ /* Common margin classs */
+ .mb75px{
+    margin-bottom: 75px;
+ }
+
+
  /* About Section */
  #about{
     height: auto;
     width: 100%;
     position: relative;
     
+ }
+ #about-para{
+    padding: 10px;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif , sans-serif;
+    text-align: justify;
+    color: gray;
+    line-height: 28px;
+    font-weight: 100;
+    font-size: 1.1rem;
+
  }
  #my-image{
     height: 12rem;
@@ -69,8 +147,8 @@ body{
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    border-style: dotted;
-    border-color: aqua;
+    border: 3px solid white;
+    box-shadow: 1px 1px 10px black;
  }
  #about p{
     font-size: 20px;
