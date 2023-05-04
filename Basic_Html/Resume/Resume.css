@@ -111,6 +111,18 @@ body{
     width: 85%;
     height: inherit;
  }
+ .thirty-percent{
+    width: 30%;
+    height: inherit;
+ }
+ .ninety-percent{
+    width: 90%;
+    height: inherit;
+ }
+ .ten-percent{
+    width: 10%;
+    height: inherit;
+ }
  /* Common margin classs */
  .mb75px{
     margin-bottom: 75px;
