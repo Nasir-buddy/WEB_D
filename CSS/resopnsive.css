@@ -1,0 +1,29 @@
+html{
+    font-size: 30px;
+}
+#responsive{
+
+   width: 100%;
+   padding: 5px;
+   border: 1px solid black;
+}
+@media screen and (min-width: 600px){
+    #responsive{
+        width: 80%;
+    } 
+}
+@media screen and (min-width: 900px){
+    #responsive{
+        width: 60%;
+    } 
+}
+/* @media screen and (max-width: 900px){
+    #responsive{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px){
+    #responsive{
+        width: 100%;
+    }
+} */
