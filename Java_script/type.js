@@ -1,14 +1,9 @@
-var a = null;
-if(a){
-    console.log("True");
-} else {
-    console.log("False");
+var n = 5;
+var i;
+var j;
+for(i = 0; i < n; i++){
+    for(j = 0; j < i; j++){
+        console.log("*");
+    }
+    console.log();
 }
-// if(a > 0)
-// {
-//     console.log("Positive");
-// } else if(a < 0){
-//     console.log("Negative");
-// } else {
-//     console.log("Zero");
-// }
