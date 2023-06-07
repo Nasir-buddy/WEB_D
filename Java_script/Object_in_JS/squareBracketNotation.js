@@ -3,8 +3,19 @@ var student = {
     rollNo: 72 ,
     marks: 70 
 };
-
-function printProp(object , prop){
-    console.log(object[prop]);
+// delete student.marks;
+// function printProp(object , prop){
+//     console.log(object[prop]);
+// }
+// printProp(student, "marks");
+// 1st method to print
+var keys = Object.getOwnPropertyNames(student); 
+// 2nd method to print 
+for(var prop in student){
+    console.log(prop , student[prop]);
 }
-printProp(student, "marks");
+
+// 3rd method to print 
+for(var prop in student){
+    console.log(prop)
+}
