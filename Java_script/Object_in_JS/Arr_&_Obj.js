@@ -1,0 +1,8 @@
+var arr = [20 , 34 , 54 ,34 ];
+// same as array but array have some properties in it to accessing the elements...
+var obj = {
+    "0" : 20, 
+    "1" : 34, 
+    "2" : 54, 
+    "3" : 34
+}
