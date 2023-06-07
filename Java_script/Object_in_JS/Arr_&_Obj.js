@@ -6,3 +6,10 @@ var obj = {
     "2" : 54, 
     "3" : 34
 }
+// Iterating over array...
+for(var i in arr){
+    console.log(i);
+}
+for(var i in obj){
+    console.log(i);
+}
