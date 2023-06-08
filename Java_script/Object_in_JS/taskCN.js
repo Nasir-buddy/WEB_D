@@ -4,6 +4,7 @@ function countdown(){
     console.log(timer, "Second");
     timer--;
     if(timer == 0){
+        console.log("Time Up!");
         clearInterval(id);
     }
 }
