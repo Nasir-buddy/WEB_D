@@ -1,0 +1,12 @@
+#box{
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    margin: 25px;
+    background-color: cyan;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#box:hover{
+    box-shadow: 0px 0px 30px gray;
+}
