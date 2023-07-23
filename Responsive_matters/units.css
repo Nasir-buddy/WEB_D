@@ -1,11 +1,23 @@
 .patern{
-    height: 50%;
-    width: 50%;
+    height: 300px;
+    width: 300px;
     background-color: rebeccapurple;
 
 }
+
+/* .inner{ */
+    /* height: 30%; */
+    /* width: 30%; */
+    /* background-color: red; */
+/* } */
 .inner{
-    height: 30%;
-    width: 30%;
-    background-color: red;
+
+    height: 50vh;
+    width: 50vw;
+    background-color: aqua;
 }
+h1{
+    font-size: 5vmax;
+}
+
+/* Vmax and Vmin */
