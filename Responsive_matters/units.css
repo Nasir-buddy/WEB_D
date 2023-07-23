@@ -20,14 +20,15 @@ html , body{
     width: 50vw;
     background-color: aqua;
 }
+/* 1 rem = 16 pixel */
 h1{
-    font-size: 1em;
+    font-size: 1rem;
 }
 h2{
-    font-size: 1em;
+    font-size: 1rem;
 }
 h3{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 /* Vmax and Vmin */
