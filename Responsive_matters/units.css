@@ -1,8 +1,12 @@
+html , body{
+    height: 100%;
+    width: 100%;
+}
 .patern{
-    height: 300px;
-    width: 300px;
-    background-color: rebeccapurple;
-
+    /* height: 400px; */
+    width: 30%;
+    background-color: #dadada;
+    font-size: 30px;
 }
 
 /* .inner{ */
@@ -17,7 +21,13 @@
     background-color: aqua;
 }
 h1{
-    font-size: 5vmax;
+    font-size: 1em;
+}
+h2{
+    font-size: 1em;
+}
+h3{
+    font-size: 1.5em;
 }
 
 /* Vmax and Vmin */
