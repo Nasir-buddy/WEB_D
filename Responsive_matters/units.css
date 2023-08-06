@@ -21,6 +21,7 @@ html , body{
     background-color: aqua;
 }
 /* 1 rem = 16 pixel */
+/* Vmax and Vmin */
 h1{
     font-size: 1rem;
 }
@@ -31,4 +32,44 @@ h3{
     font-size: 1.5rem;
 }
 
-/* Vmax and Vmin */
+
+/* Absolute and flex */
+.box{
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+}
+
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+}
+.child{
+    height: 500px;
+    width: 500px;
+    
+    background-color: red;
+    border: 5px solid black;
+}
+.child2{
+    height: 500px;
+    width: 500px;
+    background-color: red;
+    border: 5px solid black;
+    flex-direction: column;
+}
+.child3{
+    height: 500px;
+    width: 500px;
+    background-color: red;
+    border: 5px solid black;
+}
+/* x axis = mean axis
+    y = cross axis */
