@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../food/spaghetti-1932466_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.text{
+    color: #F9AF06;
+    height: 100%;
+    width: 100%;
+    padding: 5vw;
+    margin-top: 40px;
+}
+.text h1{
+    color: #F9AF06;
+    font-size: 8vw;
+    margin-bottom: 90px;
+}
+.text button{
+    margin-top: 40px;
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    border: none;
+    background-color: #E30504;
+    color: white;
+    border-radius: 20px;
+}
+    
