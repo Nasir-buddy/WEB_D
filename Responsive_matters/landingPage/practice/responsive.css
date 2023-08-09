@@ -1,0 +1,67 @@
+@media (max-width: 600px){
+    .main{
+        height: 100%;
+        width: 100%;
+        background: #000;
+    }
+    .nav{
+        height: 90px;
+        width: 100%;
+        padding: 0px 20px;
+        /* background-color: #fff; */
+    }
+    .box{
+        height: calc(100% - 90px);
+        width: 100%;
+        /* background: red; */
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        padding: 20px;
+        height: 50%;
+        width: 100%;
+        /* background: pink; */
+    }
+    .nav i{
+        display: block;
+        font-size: 30px;
+        color: #fff;
+    }
+    .menu h2{
+        display: none;
+    }
+   
+    .right{
+        height: 50%;
+        width: 100%;
+        /* background: tomato; */
+    }
+    .nav button{
+        display: none;
+    }
+    .nav h2{
+        font-size: 2rem;
+        font-family: sans-serif;
+    }
+    .left h1{
+        font-size: 2.5rem;
+        font-weight: 500;
+        font-family: sans-serif;
+        color: #fff;
+        margin-bottom: 9%;
+    }
+    .left h2{
+        font-size: 1.3rem;
+        line-height: 25px;
+    }
+    .left input{
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: none;
+        margin-top: 40px;
+        width: 100%;
+    };
+    
+    
+}
