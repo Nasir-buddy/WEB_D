@@ -20,7 +20,7 @@ html, body{
     overflow: hidden;
     height: 80%;
     width: 80%;
-    background-color: rgb(68, 228, 124);
+    background-color: #fff;
     border-radius: 20px;
 }
 .nav{
@@ -47,6 +47,8 @@ html, body{
     border-radius: 5px;
 }
 .pannel-bottom{
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     height: calc(100% - 100px);
@@ -62,7 +64,7 @@ html, body{
     width: 50px;
     font-weight: 800;
     height: 50px;
-    background-color: rgb(24, 124, 67);
+    background-color: rgb(21, 146, 33);
     border-radius: 50%;
 }
 .circle:hover{
