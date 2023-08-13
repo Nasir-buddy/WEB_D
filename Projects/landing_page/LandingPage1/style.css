@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html , body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.left{
+    position: relative;
+    width: 40vw;
+    height: 100%;
+    /* background-color: red; */
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    height: 100px;
+    width: 100%;
+}
+.nav_item{
+    width: 100%;
+    justify-content: end;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+
+}
+.nav > i{
+    font-size: 2rem;
+    opacity: .6;
+}
+.text{
+    margin-top: 70px;
+    height: calc(100% - 170px);
+    width: 100%;
+    padding: 6vw;
+}
+.text h2{
+    font-size: 8vw;
+}
+.text h3{
+    margin-top: 25px;
+}
+.text p{
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+.right{
+    width: 60vw;
+    height: 100%;
+}
+.right_top{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+}
+.rtr{
+    width: 50%;
+    height: 100%;
+    /* background-color: black; */
+    background-image: url(https://images.unsplash.com/photo-1691860305089-9a2566296202?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=685&q=80);
+    background-size: contain;
+    background-position: bottom;
+}
+.rtl{
+    width: 50%;
+    height: 100%;
+    /* background-color: aqua; */
+    background-image: url(https://images.unsplash.com/photo-1690149347325-13435f400dd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80);
+    background-size: cover;
+    background-position: 0px -80px;
+}
+.right_bottom{
+    width: 100%;
+    height: 50%;
+    background-image: url(https://images.unsplash.com/photo-1593800026718-93dc58b654d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+    background-size: cover;
+    background-position: top;
+}
