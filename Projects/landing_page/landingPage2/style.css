@@ -44,6 +44,9 @@ section{
     z-index: 100;
 }
 
+.header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0, .2);
+}
 .logo {
     font-size: 2.5rem;
     color: var(--text-color);
@@ -75,6 +78,18 @@ section{
 }
 .home-img img{
     width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+    0%{
+        transformY: translateY(0);
+    }     
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 .home-content h3{
     font-size: 3.2rem;
@@ -86,6 +101,9 @@ section{
 span{
     color: var(--main-color);
 
+}
+.home-content h1{
+    color: var(--main-color);
 }
 .home-content h1{
     font-size: 5.6rem;
@@ -169,7 +187,7 @@ span{
 .services-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     gap: 2rem;
 }
@@ -201,13 +219,15 @@ span{
 /* portfolio section */
 .portfolio{
     background: var(--second-bg-color);   
+    /* height: 100vh; */
 }
 .portfolio h2{
     margin-bottom: 4rem;
 }
 .portfolio-container{
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
+    
+    grid-template-columns: repeat(3 , 2fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -333,4 +353,8 @@ span{
 .footer-iconTop a i {
     font-style: 2.4rem;
     color: var(--second-bg-color);
+}
+/* extras */
+.landing-pg-text{
+    color: #000;
 }
