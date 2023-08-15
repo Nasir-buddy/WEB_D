@@ -12,15 +12,15 @@
 // console.log(student1);
 
 function createStudent(name , rollNO , marks){
-    var student = {};
-    student.name = name;
-    student.rollNO = rollNO;
-    student.marks = marks;
+    // var student = {};
+    this.name = name;
+    this.rollNO = rollNO;
+    this.marks = marks;
 
-    return student;
+    // return student;
 }
 
-var student1 = createStudent("Nasir Al", 17 , 78);
-var student2 = createStudent("Abhay Yadav", 87 , 75);
+var student1 = new createStudent("Nasir Al", 17 , 78);
+var student2 = new createStudent("Abhay Yadav", 87 , 75);
 console.log(student1);
 console.log(student2)
