@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+    </head>
+    <body>
+        <h1>Contact List</h1>
+        <div class="">
+            <ul>
+                <% for(let i of contact_List){ %>
+                    <li>
+                        <p><%= i.name %></p>
+                        <p><%= i.phone %></p>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
