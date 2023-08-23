@@ -6,6 +6,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'views'));
+app.use(express.urlencoded());
 
 var contactList = [
     {
@@ -34,6 +35,14 @@ app.get('/practice', function(req, res){
         title: "Let us play where EJS"
     });
 })
+app.post('/create-contact', (req, res)=>{
+    // contactList.push({
+    //     name: req.body.name,
+    //     phone: req.body.phone
+    // });
+    contactList.push(req.body);
+    return res.redirect('/');
+});
 app.listen(port, function (err) {
     if (err) {
         console.log("Error in server!", err);
