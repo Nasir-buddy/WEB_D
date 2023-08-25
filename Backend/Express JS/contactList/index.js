@@ -8,6 +8,19 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'views'));
 app.use(express.urlencoded());
 
+//Middle ware 1 
+app.use((req, res,next)=>{
+    req.myName = "Nasir";
+    // console.log('middleware 1 called');
+    next();
+});
+
+//middle ware 2
+app.use((req , res, next)=>{
+    console.log("My name from M2", req.myName);
+    // console.log("Middle ware 2 called");
+    next();
+})
 var contactList = [
     {
         name: "Nasir Ali",
@@ -24,6 +37,7 @@ var contactList = [
 ];
 
 app.get('/', function (req, res) {
+    console.log(req.myName);
     return res.render('home',{ 
         title: "My contacts List",
         contact_List: contactList
