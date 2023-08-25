@@ -67,3 +67,31 @@ html , body{
     line-height: 1;
     letter-spacing: -4px;
 }
+.homelast{
+    padding: 5vw 15vw;
+}
+.homelast p{
+    width: 50%;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .5px;
+    
+}
+.homelast p::selection{
+    color: #fff;
+    background-color: #000;
+}
+
+.featured{
+    padding: 10vw 10vw;
+
+}
+.featured h1{
+    line-height: 1;
+    font-size: 3.4rem;
+    font-weight: 400;
+}
+.featured h1:nth-child(2){
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
