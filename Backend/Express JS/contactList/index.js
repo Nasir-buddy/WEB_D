@@ -6,9 +6,11 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'views'));
+//Middle ware 1 
+//express.encoded detect which fn to be called .. and it reades the data and analysis it 
+// convert the form data into request form body .. 
 app.use(express.urlencoded());
 
-//Middle ware 1 
 app.use((req, res,next)=>{
     req.myName = "Nasir";
     // console.log('middleware 1 called');
