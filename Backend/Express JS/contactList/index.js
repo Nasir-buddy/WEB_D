@@ -10,19 +10,22 @@ app.set('views', path.join(__dirname,'views'));
 //express.encoded detect which fn to be called .. and it reades the data and analysis it 
 // convert the form data into request form body .. 
 app.use(express.urlencoded());
+// middleware static
+app.use(express.static('assets'));
 
-app.use((req, res,next)=>{
-    req.myName = "Nasir";
-    // console.log('middleware 1 called');
-    next();
-});
+// app.use((req, res,next)=>{
+//     req.myName = "Nasir";
+//     // console.log('middleware 1 called');
+//     next();
+// });
 
-//middle ware 2
-app.use((req , res, next)=>{
-    console.log("My name from M2", req.myName);
-    // console.log("Middle ware 2 called");
-    next();
-})
+// //middle ware 2
+// app.use((req , res, next)=>{
+//     console.log("My name from M2", req.myName);
+//     // console.log("Middle ware 2 called");
+//     next();
+// })
+
 var contactList = [
     {
         name: "Nasir Ali",
