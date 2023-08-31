@@ -22,7 +22,7 @@ app.use(express.static('assets'));
 // //middle ware 2
 // app.use((req , res, next)=>{
 //     console.log("My name from M2", req.myName);
-//     // console.log("Middle ware 2 called");
+//     // console.log("Middle ware 2 scalled");
 //     next();
 // })
 
@@ -42,7 +42,7 @@ var contactList = [
 ];
 
 app.get('/', function (req, res) {
-    console.log(req.myName);
+    // console.log(req.myName);
     return res.render('home',{ 
         title: "My contacts List",
         contact_List: contactList
@@ -62,9 +62,37 @@ app.post('/create-contact', (req, res)=>{
     contactList.push(req.body);
     return res.redirect('/');
 });
-app.listen(port, function (err) {
+
+app.get('/delete-contact/', function(req, res){
+    // console.log(req.query);
+    let phone = req.query.phone;
+
+    let contactIndex = contactList.findIndex(contact => contact.phone == phone);
+
+    if(contactIndex != -1){
+        contactList.splice(contactIndex, 1);
+    }
+    return res.redirect('back');
+});
+
+app.listen(port, function(err) {
     if (err) {
         console.log("Error in server!", err);
     }
     console.log("Server is running successfully on port: ", port);
 })
+// steps
+// 1.st index.js
+// npm init
+// npm install express
+//  server starting 
+//  from nodemon
+// npm install ejs
+///  use ejs as a view engine
+//   path of views
+//   created a file named home.ejs
+// form + post req
+// static files
+//  created assest from assests
+//  we created assests folder
+//  and home css js 
