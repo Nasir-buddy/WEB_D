@@ -3,24 +3,36 @@
         <title>
             <%= locals.title %>
         </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
-        <h1>Contact List</h1>
-        <div class="">
-            <ul>
-                <% for(let i of contact_List){ %>
-                    <li>
-                        <p><%= i.name %></p>
-                        <p><%= i.phone %></p>
-                    </li>
-                <% } %>
-            </ul>
+        <h1 id="page-header">
+            <i class="fas fa-address-book"></i>
+            My Contacts List
+        </h1>
+        <div class="main-box">
+            <div class="contact">
+                    <% for(let i of contact_List){ %>
+                           <div class="list">
+                            <div class="name">
+                                <i class="fa-solid fa-address-book" style="color: #ffc0cb;"></i>
+                                <%= i.name %>
+                            </div>
+                           <div class="num">
+                            <%= i.phone %>
+                           </div>
+                           </div>
+                    <% } %>
+            <div class="formbox">
+                <form class="box" action="/create-contact" method="POST">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="number" name="phone" placeholder="Enter your number." required>
+                    <button type="submit">Add Contact</button>
+                </form>
+            </div>
         </div>
-        <form action="/create-contact" method="POST">
-            <input type="text" name="name" placeholder="Enter your name" required>
-            <input type="number" name="phone" placeholder="Enter your number." required>
-
-            <button type="submit">Add Contact</button>
-        </form>
+        
+        <script type="text/javascript" src="/js/home.js"></script>
     </body>
 </html>
