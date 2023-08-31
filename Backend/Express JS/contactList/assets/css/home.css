@@ -1,3 +1,90 @@
 body{
+    margin: 0;
+    font-family: sans-serif;
+    /* text-align: center; */
+}
+#page-header{
     text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+.main-box{
+    height: 90vh;
+    width: 100%;
+    text-align: center;
+    /* text-decoration: none; */
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact{
+    height: 50%;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #fff;
+    width: 50%;
+    border: 1px solid pink;
+    border-radius: 10px;
+    margin-top: 10px;
+    
+}
+.list:hover{
+    border: 2px solid plum;
+    transition: 0s ease-out ;
+}
+
+.name i{
+    margin-right: 10px;
+}
+.formbox{
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+   
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border: none;
+    border-bottom: 2px solid #ffc0cb;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.box button{
+    margin-top: 10px;
+    border: none;
+    padding: 10px 60px;
+    border-radius: 20px;
+}
+button{
+    color: #001;
+    background-color: #ffc0cb;
+    border: none;
+    font-weight: 500;
+}
+button:hover{
+    color: black;
+    background-color: rgb(83, 230, 83);
+    border: 2px solid black;
+    transition: .5s ease;
+    border: none;
 }
