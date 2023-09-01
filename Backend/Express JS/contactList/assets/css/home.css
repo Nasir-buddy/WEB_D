@@ -1,7 +1,18 @@
-body{
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    /* margin: 0; */
     font-family: sans-serif;
     /* text-align: center; */
+    background-image: url(https://img.freepik.com/free-photo/top-view-chat-bubbles-with-telephone-receiver-copy-space_23-2148796078.jpg?w=996&t=st=1693490631~exp=1693491231~hmac=a4fcc2ab0841aa83e5ab6854d361b101166f1d90eb2e7e9a1b5ca4abec4851c6);
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #page-header{
     text-align: center;
@@ -9,19 +20,18 @@ body{
     color: grey;
 }
 .main-box{
-    height: 90vh;
+    height: 100%;
     width: 100%;
-    text-align: center;
     /* text-decoration: none; */
     /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
 }
 .contact{
     height: 50%;
-    width: 50vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,6 +39,7 @@ body{
 }
 .list{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 10px 10px;
@@ -43,13 +54,18 @@ body{
     border: 2px solid plum;
     transition: 0s ease-out ;
 }
-
-.name i{
-    margin-right: 10px;
+.data{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
 }
+
+
 .formbox{
     width: 100vw;
-    height: 100vh;
+    height: 5%;
     border: none;
     margin-top: 20px;
     display: flex;
