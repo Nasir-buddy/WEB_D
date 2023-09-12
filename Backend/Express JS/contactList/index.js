@@ -12,7 +12,11 @@ app.set('views', path.join(__dirname,'views'));
 //Middle ware 1 
 //express.encoded detect which fn to be called .. and it reades the data and analysis it 
 // convert the form data into request form body .. 
-app.use(express.urlencoded());
+// we doing extended true because in url passing many type of thing not only string 
+
+app.use(express.urlencoded({extended:true}));
+// we using express.json to calling the function of json 
+app.use(express.json());
 // middleware static
 app.use(express.static('assets'));
 
@@ -58,13 +62,26 @@ app.get('/practice', function(req, res){
         title: "Let us play where EJS"
     });
 })
-app.post('/create-contact', (req, res)=>{
+app.post('/create-contact', async (req, res)=>{
     // contactList.push({
     //     name: req.body.name,
     //     phone: req.body.phone
     // });
-    contactList.push(req.body);
-    return res.redirect('/');
+    // contactList.push(req.body);
+    // return res.redirect('/');
+    try {
+        
+    const result = await Contact.create({
+            name: req.body.name,
+            phone: req.body.phone     
+        }); 
+        console.log(result);
+        return res.redirect('/');
+    } catch (error) {
+            console.log("Cannot push the contact,", error);
+            return res.redirect('/');
+    }
+    
 });
 
 app.get('/delete-contact/', function(req, res){
