@@ -61,7 +61,9 @@ app.get('/practice', function(req, res){
     return res.render('practice',{
         title: "Let us play where EJS"
     });
-})
+});
+
+// Thanks Anurag Chauhan to helping to fix this issue 
 app.post('/create-contact', async (req, res)=>{
     // contactList.push({
     //     name: req.body.name,
