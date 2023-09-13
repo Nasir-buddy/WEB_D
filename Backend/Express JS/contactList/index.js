@@ -5,16 +5,17 @@ const port = 8000;
 
 const db = require('./config/mongoose');
 const Contact = require('./models/contact');
+const { kMaxLength } = require('buffer');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname,'views'));
+app.set('views', path.join(__dirname, 'views'));
 //Middle ware 1 
 //express.encoded detect which fn to be called .. and it reades the data and analysis it 
 // convert the form data into request form body .. 
 // we doing extended true because in url passing many type of thing not only string 
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 // we using express.json to calling the function of json 
 app.use(express.json());
 // middleware static
@@ -49,22 +50,29 @@ var contactList = [
     }
 ];
 
-app.get('/', function (req, res) {
-    // console.log(req.myName);
-    return res.render('home',{ 
-        title: "My contacts List",
-        contact_List: contactList
-    });
+app.get('/', async function (req, res) {
+    try {
+        const data = await Contact.find({
+            
+        });
+        return res.render('home',{
+            title: "Contact List",
+            contact_List: data
+        })
+    } catch (error) {
+        console.log("Error in creating contact.", error);
+        return;
+    }
 });
 
-app.get('/practice', function(req, res){
-    return res.render('practice',{
+app.get('/practice', function (req, res) {
+    return res.render('practice', {
         title: "Let us play where EJS"
     });
 });
 
 // Thanks Anurag Chauhan to helping to fix this issue 
-app.post('/create-contact', async (req, res)=>{
+app.post('/create-contact', async (req, res) => {
     // contactList.push({
     //     name: req.body.name,
     //     phone: req.body.phone
@@ -72,33 +80,33 @@ app.post('/create-contact', async (req, res)=>{
     // contactList.push(req.body);
     // return res.redirect('/');
     try {
-        
-    const result = await Contact.create({
+        const result = await Contact.create({
             name: req.body.name,
-            phone: req.body.phone     
-        }); 
-        console.log(result);
+            phone: req.body.phone
+        });
+        // console.log(result);
         return res.redirect('/');
     } catch (error) {
-            console.log("Cannot push the contact,", error);
-            return res.redirect('/');
+        console.log("Cannot push the contact,", error);
+        return res.redirect('/');
     }
-    
+
 });
 
-app.get('/delete-contact/', function(req, res){
+app.get('/delete-contact/',async function (req, res) {
     // console.log(req.query);
-    let phone = req.query.phone;
-
-    let contactIndex = contactList.findIndex(contact => contact.phone == phone);
-
-    if(contactIndex != -1){
-        contactList.splice(contactIndex, 1);
+    // get the if from query in the ul
+    let id = req.query.id;
+    try {
+        await Contact.findByIdAndDelete(id);
+        return res.redirect('back');
+    } catch (error) {
+        console.log("Error in deleting an object from database");
+        return;
     }
-    return res.redirect('back');
 });
 
-app.listen(port, function(err) {
+app.listen(port, function (err) {
     if (err) {
         console.log("Error in server!", err);
     }
