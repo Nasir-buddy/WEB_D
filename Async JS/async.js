@@ -94,7 +94,7 @@ var p3 = p2.then((data)=>{
 p3.then((data)=>{
     console.log(data);
     return new Promise((res, rej)=>{
-
+        
     })
 })
     // settimeout
@@ -104,3 +104,25 @@ p3.then((data)=>{
     // callback
     // async await
 // async and await
+// koi bhi aisa kam jisme aap async code likhenge , kyoki async code hai to aap 
+// promises ka istemaal kar sakte hai, jab uska answer aayga aapko then lagana padega, 
+// , us thenko lagane se bachne ke liye , aap asynch await ka istemaal kar sakte hai.
+// normal form 
+// function abcd(){
+//     fetch('https://randomuser.me/api/')
+//     .then((raw)=>{
+//         return raw.json();
+//     })
+//     .then((data)=>{
+//         console.log(data)
+//     })
+// }
+// async function now
+async function abcd(){
+    let raw = await fetch('https://randomuser.me/api/');
+    let ans = await raw.json();
+    console.log(ans);
+}
+// jabbhi jab koi code async hai to aapko uske liye wait karna pdta hai kyoki humein nahi pata uska answer kab aayga
+
+abcd();
