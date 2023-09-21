@@ -70,9 +70,37 @@ ans.then(()=>{
 .catch(()=>{
     console.log("not resolve")
 })
+// sabse pehle ghar par aao
+// gate kholo aur gatelagao
+// khana pakao khana khoo
+// incongito mode chalao
+// sojao kyunki tum thak gaye ho 
+var ans = new Promise((res, rej)=>{
+    return res("sabse pehle tum ghar par aao");
+})
+var p2 = ans
+    .then((data)=>{
+        console.log(data);
+        return new Promise((res, rej)=>{
+            return res ("gate kholo aur lagao");
+        })
+    })
+var p3 = p2.then((data)=>{
+    console.log(data);
+    return new Promise((res, rej)=>{
+        return res ("khana pakao khana khao");
+    })
+})
+p3.then((data)=>{
+    console.log(data);
+    return new Promise((res, rej)=>{
+
+    })
+})
     // settimeout
     // setinterval
 
     // then catch
     // callback
     // async await
+// async and await
