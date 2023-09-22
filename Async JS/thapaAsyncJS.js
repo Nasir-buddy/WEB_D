@@ -50,9 +50,18 @@ pobj1.then((roll_no)=>{
 
 // async await
 async function getData(){
-    const rollnodata = await pobj1
+    try {
+        const rollnodata = await pobj1
     console.log(rollnodata);
-    const ans = await getBiodata();
-    console.log(ans);
+    const ans = await getBiodata(rollnodata[1]);
+    // console.log(ans);
+    return anss;
+    } catch (error) {
+        alert(`The Error: ${error}`);
+        console.log(`The Error: ${error}`);
+    }
+    
 }
-getData();
+const getname = getData().then((myname)=>{
+    console.log(myname);
+})
