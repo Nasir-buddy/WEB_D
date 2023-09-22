@@ -48,5 +48,11 @@ pobj1.then((roll_no)=>{
 
 
 
-
-
+// async await
+async function getData(){
+    const rollnodata = await pobj1
+    console.log(rollnodata);
+    const ans = await getBiodata();
+    console.log(ans);
+}
+getData();
