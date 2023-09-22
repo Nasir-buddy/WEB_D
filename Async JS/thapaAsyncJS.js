@@ -35,9 +35,12 @@ const getBiodata = (indexData) => {
 
 pobj1.then((roll_no)=>{
     console.log(roll_no);
-    getBiodata(roll_no[1]).then((anything) => {
-        console.log(anything);
-    })
+    return getBiodata(roll_no[1]);
+    // .then((anything) => {
+        // console.log(anything);
+    // })
+}).then((anything) => {
+    console.log(anything);
 })
 .catch((rej)=>{
     console.log("not resolved",rej);
