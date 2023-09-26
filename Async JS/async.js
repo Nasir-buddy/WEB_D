@@ -118,10 +118,16 @@ p3.then((data)=>{
 //     })
 // }
 // async function now
+// fetching by await
 async function abcd(){
     let raw = await fetch('https://randomuser.me/api/');
     let ans = await raw.json();
-    console.log(ans);
+    try{
+        console.log(ans);
+    }
+    catch{
+        console.log("noting to getting");
+    }
 }
 // jabbhi jab koi code async hai to aapko uske liye wait karna pdta hai kyoki humein nahi pata uska answer kab aayga
 
