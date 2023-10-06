@@ -23,10 +23,10 @@ chalaayega
 
 Content
 - node js install krna hai ✅
-- inport and export
-- run the code
+- inport and export ✅
+- run the code ✅
 -- node js core usage and understanding -- http
-- npm usage
+- npm usage ✅
 - ExpressJS
 - express generator
 - MongoDB
