@@ -1,0 +1,38 @@
+1. What is backend ? 
+Ans. Backend developer wo banda jai jo ki sever and db program karta hai.
+
+2. Why backend ? 
+Ans. To make website more usable and purposefull for the audience, to make websites dynamic.
+
+3. Why not frontend alone ?
+Ans. with frontend websites are static and they are of not must use. 
+
+4. What do we need ? 
+Ans. Nodejs, MongoDB, Mongoosejs, ExpressJS.
+
+5. What should we make to hig big companies ? 
+
+other 
+install ka matlab hota hai aapke laptop desktop tablet usmein files ko copy karna
+
+// something intresing 
+Node js hai khoob saara c++ ka code jo ki liya gaya hai chrome browser ke v8 engine ke code se aur is c++ code jisko liya gaya
+usey wrap kar diya gaya js cose se and ye hume allow karta hai ke hum js come likhein aur ye js come assecpt karega and c++ 
+ke basis par aapko ek server environment bana kar dega, par sirf tab tak jab tak ye code chalaayega tb tk node (v0 engine and js wrapper)
+chalaayega
+
+Content
+- node js install krna hai ✅
+- inport and export
+- run the code
+-- node js core usage and understanding -- http
+- npm usage
+- ExpressJS
+- express generator
+- MongoDB
+-- intermediate MongoDB
+-- api development
+-- authentication and authorization
+-- error handling 
+- middleware 
+-- session and cookies 
