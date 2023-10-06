@@ -27,6 +27,11 @@ const exp = require('express');
 const app = exp();
 const port = 3000;
 console.log("Server is started successfully on port :", port);
+
+app.use(function(req, res, next){
+    console.log("Middle ware.");
+    next();
+})
 app.get('/', (req, res)=>{
     res.send("hey me");
 });
