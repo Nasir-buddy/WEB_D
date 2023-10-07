@@ -22,23 +22,32 @@
 //     console.log(data);
 // })
 
-
+// require import the package
 const exp = require('express');
+// saving in the variable 
 const app = exp();
+// creating the port 
 const port = 3000;
+// just for checking the server 
 console.log("Server is started successfully on port :", port);
 
+// This is middleware that run before the any route
 app.use(function(req, res, next){
     console.log("Middle ware.");
     next();
-})
+});
+
+// route 
 app.get('/', (req, res)=>{
     res.send("hey me");
 });
+// route 2nd
 app.get('/profile', (req, res)=>{
     res.send("hey this is profile page.");
 });
+// 3rd rotute
 app.get('/like', (req, res)=>{
     res.send("hey like me.");
 });
+// listning the port 
 app.listen(port);
