@@ -1,22 +1,14 @@
 const express = require('express');
 const app = express();
 
-app.use((req, res, next) => {
-    // console.log(req);
-    console.log("Middle ware");
-    next();
-});
-app.get('/profile/:username', (req, res) => {
-    res.send(`Hello from ${req.params.username}`);
-})
-app.get('/', (req, res) => {
-    res.send('Hello world');
-})
-app.get('/home', (req, res) => {
-    res.send('home section');
-})
-app.get('/about', (req, res) => {
-    res.send('about section');
-})
+app.set("view engine", "ejs");
 
+app.use(express.static('./public'));
+
+app.get('/', (req, res)=>{
+    res.render('index');
+})
+app.get('/contact', (req, res)=>{
+    res.render('contact');
+})
 app.listen(8000);
