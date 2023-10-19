@@ -6,11 +6,11 @@ app.use((req, res, next) => {
     console.log("Middle ware");
     next();
 });
+app.get('/profile/:username', (req, res) => {
+    res.send(`Hello from ${req.params.username}`);
+})
 app.get('/', (req, res) => {
     res.send('Hello world');
-})
-app.get('/profile', (req, res) => {
-    res.send('profile section');
 })
 app.get('/home', (req, res) => {
     res.send('home section');
