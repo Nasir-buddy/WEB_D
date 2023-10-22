@@ -7,16 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../weather_app/style.css">
+    <link rel="stylesheet" href="../weather_app/responsive.css">
 </head>
 <body>
     <div id="main">
             <div class="card">
                 <div class="search">
                     <input type="text" placeholder="Enter the city name" spellcheck="false">
-                    <button>
-                        <img src="../weather_app/images/search.png" alt="">
-                    </button>
+                    <div class="btn">
+                        <i class="ri-search-eye-line"></i>
+                    </div>
                 </div>
                 <div class="weather">
                     <img src="../weather_app/images/rain.png" alt="" class="weather-icon">
@@ -31,7 +33,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <img src="../weather_app/images/wind.png" alt="">
+                            <img class="right-img" src="../weather_app/images/wind.png" alt="">
                             <div>
                                 <p class="wind">km/h</p>
                                 <p>Wind Speed</p>
