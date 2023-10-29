@@ -2,9 +2,11 @@ const User = require('../models/user')
 
 module.exports.profile = async (req, res) => {
     try {
+        // trying to find the user
         if (req.cookies.user_id) {
+            // finding by user id 
             const user = await User.findById(req.cookies.user_id);
-
+            // if we found the user the we redirecting the page to the user profile 
             if (user) {
                 return res.render('users_profile', {
                     title: "User Profile",
@@ -12,7 +14,7 @@ module.exports.profile = async (req, res) => {
                 });
             }
         }
-
+        // other wise we are redirecting to the sign in page in both of the cases
         return res.redirect('/users/sign-in');
     } catch (err) {
         console.error('Error in finding user by ID:', err);
