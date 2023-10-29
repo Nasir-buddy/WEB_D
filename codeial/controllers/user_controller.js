@@ -1,10 +1,25 @@
 const User = require('../models/user')
 
-module.exports.profile = (req, res)=>{
-    return res.render('users_profile.ejs',{
-        title: "Entered in users directory"
-    })
-}
+module.exports.profile = async (req, res) => {
+    try {
+        if (req.cookies.user_id) {
+            const user = await User.findById(req.cookies.user_id).exec();
+
+            if (user) {
+                return res.render('users_profile', {
+                    title: "User Profile",
+                    user: user
+                });
+            }
+        }
+
+        return res.redirect('/users/sign-in');
+    } catch (err) {
+        console.error('Error in finding user by ID:', err);
+        return res.redirect('/users/sign-in');
+    }
+};
+
 
 //render the sign up page 
 module.exports.signUp = function(req, res){
