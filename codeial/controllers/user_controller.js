@@ -3,7 +3,7 @@ const User = require('../models/user')
 module.exports.profile = async (req, res) => {
     try {
         if (req.cookies.user_id) {
-            const user = await User.findById(req.cookies.user_id).exec();
+            const user = await User.findById(req.cookies.user_id);
 
             if (user) {
                 return res.render('users_profile', {
