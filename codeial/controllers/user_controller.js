@@ -15,7 +15,7 @@ module.exports.profile = async (req, res) => {
             }
         }
         // other wise we are redirecting to the sign in page in both of the cases
-        return res.redirect('/users/sign-in');
+        // return res.redirect('/users/sign-in');
     } catch (err) {
         console.error('Error in finding user by ID:', err);
         return res.redirect('/users/sign-in');
