@@ -1,5 +1,6 @@
 module.exports.home = (req, res)=>{
-    return res.render('home.ejs',{
-        title: "Nasir"
+    console.log("Cookies value : ", req.cookies);
+    return res.render('home',{
+        title: "Home"
     });
 }  
