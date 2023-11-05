@@ -114,3 +114,7 @@ intermediate mognodb (not in this video)
     kisi bhi route me aap ko flash create karna hai 
     kisi bhi doosre route par aap use chalane ka try kare 
     AAP CONNECT FLASH KO USE NAHI KAR SKTE BINA EXPRESS SESSION KE 
+
+    hum log chahte hai ki jab ham ksis route par jate jaise ki / failed us route par ek 
+    flash message bane aur wo flash message hum logo ko route par dikhe ejs main 
+    
