@@ -94,13 +94,25 @@ intermediate mognodb (not in this video)
 
 ----NEXT VIDEO ON -----
 --End Game part 2 --
-    flash messages 
+    flash messages ✅
     intermediate mongodb 
-        How can I perform a case insensitive search in MOngoose?
-        How do I find documents where an array field contains all of a set of value?
-        How can I search for documents with a specific date range in Mongoose?
-        How can I filter documents based on the existence of a field's in Mongoose ? 
+        How can I perform a case insensitive search in Mongoose? ✅
+        How do I find documents where an array field contains all of a set of value?✅
+        How can I search for documents with a specific date range in Mongoose? ✅
+        How can I filter documents based on the existence of a field's in Mongoose ? ✅
     Authentication and authorization
+
+        install these packages: 
+        npm i passport passport-local passport-local-mongoose mongoose 
+        express-session 
+
+    Write app.js code first in app.js file and write it after view engine 
+    and before logger 
+
+    setup user.js then properly
+
+    in index.js try register first and then other codes as well 
+    
     choosing out project:
         pinterest 
         youtube music 
@@ -117,4 +129,5 @@ intermediate mognodb (not in this video)
 
     hum log chahte hai ki jab ham ksis route par jate jaise ki / failed us route par ek 
     flash message bane aur wo flash message hum logo ko route par dikhe ejs main 
-    
+
+intermediate mongodb
