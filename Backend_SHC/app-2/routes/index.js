@@ -44,9 +44,16 @@ router.get('/find', async(req, res)=>{
   // let user = await userModel.find({categories: { $all :
   //    ["drawing", "node"]}});
 
-  var date2 = new Date('2023-11-02')
-  var date1 = new Date('2023-11-15')
-  let user = await userModel.find({ datecreated: {$gte: date1 , $lte: date2}});
+  // var date2 = new Date('2023-11-02')
+  // var date1 = new Date('2023-11-15')
+  let user = await userModel.find({
+    $expr: {
+      $and: [
+        {$gte: [{$strLenCP: '$nickname'}, 0]},
+        {$lte: [{$strLenCP: '$nickname'}, 6]}
+      ]
+    }
+  });
   console.log(user);
   res.send(user);
 })
