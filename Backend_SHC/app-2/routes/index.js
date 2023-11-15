@@ -39,12 +39,14 @@ router.get('/find', async(req, res)=>{
   // new RedExp(search , flag)
   // var regex = new RegExp('^NaSiR$', 'i')
   // let user = await userModel.find({username: regex});
-  console.log(res);
-  var regex = new RegExp("^samreen$", 'i')
-  let user = await userModel.find({categories: { $all :
-     ["drawing", "node"]}});
+  // console.log(res);
+  // var regex = new RegExp("^samreen$", 'i')
+  // let user = await userModel.find({categories: { $all :
+  //    ["drawing", "node"]}});
 
-  
+  var date2 = new Date('2023-11-02')
+  var date1 = new Date('2023-11-15')
+  let user = await userModel.find({ datecreated: {$gte: date1 , $lte: date2}});
   console.log(user);
   res.send(user);
 })
